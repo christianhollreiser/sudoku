@@ -2,18 +2,18 @@ package generator;
 
 import java.util.*;
 
-public class Square {
+public class Square implements Cloneable{
     private Set<Integer> candidates;
     private int entry;
 
     public Square(){
         this.entry = 0;
-        this.candidates = new HashSet<Integer>();
+        this.candidates = new HashSet<>();
     }
 
     public Square(int value){
         this.entry = value;
-        this.candidates = new HashSet<Integer>();
+        this.candidates = new HashSet<>();
     }
 
     public void addCandidate(int candidate){
@@ -38,5 +38,12 @@ public class Square {
 
     public Set<Integer> getCandidates(){
         return this.candidates;
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        Square clone = (Square) super.clone();
+        clone.candidates = new HashSet<>(this.candidates);
+        return clone;
     }
 }
