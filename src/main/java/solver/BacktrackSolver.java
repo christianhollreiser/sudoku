@@ -1,3 +1,7 @@
+package solver;
+
+import generator.*;
+
 public class BacktrackSolver implements Solver{
 
     @Override

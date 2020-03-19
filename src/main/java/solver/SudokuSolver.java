@@ -1,3 +1,6 @@
+package solver;
+
+import generator.*;
 
 public class SudokuSolver {
 

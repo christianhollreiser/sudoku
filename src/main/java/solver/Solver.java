@@ -1,3 +1,7 @@
+package solver;
+
+import generator.*;
+
 public interface Solver {
 
     public boolean solve(SudokuPuzzle puzzle);
